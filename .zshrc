@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="lambda"
+ZSH_THEME="lambda-avelle"
 # gnzh half-life lambda norm
 
 # Set list of themes to pick from when loading at random
@@ -110,7 +110,6 @@ alias R="sudo pacman -Rn"
 alias Rs="sudo pacman -Rns"
 alias Scc="sudo pacman -Scc --needed --noconfirm && sudo yay -Scc --needed --noconfirm"
 alias free="free -h"
-alias server="ssh avelle@192.168.1.54"
 alias nf="neofetch"
 alias rf="rm -rf"
 alias clone="git clone"
@@ -119,8 +118,8 @@ alias pi="python3 install"
 alias mp="mousepad"
 
 
-#title_block
-pokemon-colorscripts --no-title -r 1 
+title_block
+#pokemon-colorscripts --no-title -r 1 
 
 export "MICRO_TRUECOLOR=1"
 #export DOTNET_ROOT=$HOME/.dotnet
