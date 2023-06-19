@@ -118,7 +118,7 @@ alias pi="python3 install"
 alias mp="mousepad"
 
 
-title_block
+~/.config/alacritty/title_block
 #pokemon-colorscripts --no-title -r 1 
 
 export "MICRO_TRUECOLOR=1"
