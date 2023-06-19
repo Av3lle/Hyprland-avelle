@@ -1,0 +1,122 @@
+{
+    "height": 20,
+    "margin-top": 3,
+    "margin-left": 10,
+    "margin-bottom": 0,
+    "margin-right": 10,
+    "spacing": 5, 
+
+
+    //"modules-left": ["hyprland/window"],
+    "modules-left": ["memory", "cpu", "hyprland/language", "network"],
+    "modules-center": ["wlr/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
+
+
+    "wlr/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "active": "",
+        "default": ""
+      }
+    },
+
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "EN",
+		"format-ru": "RU",
+	 },
+	
+    "hyprland/window": {
+      "format": "{}",
+      "separate-outputs": false,
+      "max-length": 35
+    },
+
+
+    "tray": {
+        "spacing": 10
+    },
+
+
+    "clock": {
+        "format": "<span color='#bf616a'> </span>{:%I:%M %p}",
+    },
+
+
+    "cpu": {
+      "interval": 1,
+      "format": "<span color='#fb958b'></span> {usage}%",
+      "max-length": 100,
+      "on-click": "",
+    },
+
+
+    "memory": {
+        "interval": 30,
+        "format": "<span color='#ebcb8b'></span> {}%",
+        "format-alt":" {used:0.1f}G",
+        "max-length": 10,
+    },
+
+
+    "backlight": {
+        "device": "DP-1",
+        "format": "<span color='#6ee3e1'>{icon}</span> {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+    },
+
+
+    "network": {
+        "format-wifi": "直",
+        "format-ethernet": " wired",
+        "format-disconnected": "睊",
+		"on-click": "/bin/wif",
+    },
+
+
+    "pulseaudio": {
+        "format": "<span color='#7d9bba'>{icon}</span> {volume}%",
+        "format-bluetooth": "  {volume}%",
+        "format-bluetooth-muted": "婢 ",
+        "format-muted": "婢",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+    },
+
+
+    "battery": {
+      "bat": "BAT1",
+      "adapter": "ADP0",
+      "interval": 60,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "max-length": 20,
+      "format": "{icon}{capacity}%",
+      "format-warning": "{icon} {capacity}%",
+      "format-critical": "{icon} {capacity}%",
+      "format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
+      "format-plugged": "<span color='#26a65b;'></span> {capacity}%",
+      "format-alt": "{icon} {time}",
+      "format-full": " {capacity}%",
+      "format-icons": [" ", " ", " ", " ", " "],
+    },
+}
+

@@ -1,0 +1,171 @@
+* {
+  /*font-family: JetBrainsMono Nerd Font;*/
+  font-family: Fira Mono;
+  font-size: 15px;
+  font-weight: 900;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+}
+
+
+
+#window {
+  color: #a8a8a8;
+}
+window#waybar {
+  background-color: transparent;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 0px;
+  transition-duration: 0.5s;
+  margin: 0px 0px;
+}
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+
+
+/* ИНИЦИАЛИЗАЦИЯ МОДУЛЕЙ */
+#window,
+#clock,
+#battery,
+#memory,
+#pulseaudio,
+#cpu,
+#window,
+#backlight,
+#network,
+#tray,
+#language,
+#workspaces {
+  border-radius: 20px;
+  padding: 0px 10px;
+  background-color: #111010;
+}
+
+
+
+#language {
+  color: #c8d2e0;
+}
+
+
+
+/* ПРОЦ */
+#cpu {
+  color: #c8d2e0;
+}
+
+label:disabled,
+#language {
+  color: #c8d2e0;
+}
+
+
+/* ПАМЯТЬ */
+#memory {
+  color: #c8d2e0;
+}
+
+
+
+/* ПУЛЬСА */
+#pulseaudio {
+  color: #c8d2e0;
+}
+
+
+
+/* ЯРКОСТЬ */
+#backlight {
+  color: #c8d2e0;
+}
+
+
+
+/* ВРЕМЯ */
+#clock {
+  color: #c8d2e0;
+  padding: 10;
+}
+
+
+
+/* БАТАРЕЯ */
+#battery {
+  color: #c0caf5;
+}
+#battery.charging,
+#battery.full,
+#battery.plugged {
+  color: #c8d2e0;
+}
+@keyframes blink {
+  to {
+    background-color: rgba(30, 34, 42, 0.5);
+    color: #abb2bf;
+  }
+}
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+label:focus {
+  background-color: #000000;
+}
+
+
+
+/* ИНТЕРНЕТ */
+#network {
+  color: #b48ead;
+}
+#network.disconnected {
+  color: #f53c3c;
+}
+
+
+
+/* ТРЕЙ */
+#tray {
+  padding: 10;
+  color: #d8dee8;
+  border-radius: 15;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+
+
+/*ВОРКСПЕЙСЫ*/
+#workspaces button {
+  padding: 0 2px;
+  color: #7984a4;
+  background-color: transparent;
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 15;
+}
+#workspaces button.focused {
+  background-color: transparent;
+}
+#workspace button.hover {
+  background-color: transparent;
+}
+#workspaces button.active {
+  color: #fff;
+}
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
